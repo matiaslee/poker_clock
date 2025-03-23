@@ -223,6 +223,8 @@ function iniciarReloj() {
             tiempoRestante = entrada.duracion * 60;
         }
         mostrarTiempoRestante();
+        mostrarEntradaActual(entrada);
+        mostrarEntradaSiguiente();
         iniciarTemporizador(entrada);
         relojAndando = true;
         actualizarVisibilidad();
@@ -238,7 +240,6 @@ function mostrarTiempoRestante() {
 
 
 function iniciarTemporizador(entrada) {
-    mostrarEntradaActual(entrada);
     timerInterval = setInterval(() => {
         tiempoRestante--;
         mostrarTiempoRestante();
@@ -267,25 +268,49 @@ function resetearEntradaActual(entrada) {
 function mostrarEntradaActual(entrada) {
     const info = document.getElementById('entrada-actual-info');
     info.textContent = entrada.tipo === 'nivel'
-        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duración: ${entrada.duracion} mins`
+        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duración: ${entrada.duracion} mins - Nivel: ${entradaActual + 1}`
         : `Pausa - Duración ${entrada.duracion} min`;
 }
+
+function mostrarEntradaSiguiente() {
+    const info = document.getElementById('entrada-siguiente-info');
+    let hay_siguiente_entrada;
+    let entrada;
+
+    hay_siguiente_entrada = entradaActual + 1 < entradas.length;
+
+    if (hay_siguiente_entrada) {
+        entrada = entradas[entradaActual + 1];
+        info.textContent = entrada.tipo === 'nivel'
+            ? `(Siguiente Nivel: ${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duración: ${entrada.duracion} mins)`
+            : `(Siguiente Nivel: Pausa - Duración ${entrada.duracion} mins)`;
+
+    }else{
+        info.textContent = `Ultima Entrada...`;
+    }
+}
+
+
 
 function avanzarEntrada() {
     entradaActual++;
 
     if (entradaActual < entradas.length) {
-        let entrada = entradas[entradaActual]
+        let entrada = entradas[entradaActual];
+        let siguiente_entrada;
+        let hay_siguiente_entrada;
+
         mostrarEntradaActual(entrada);
-        console.log('1')
+        mostrarEntradaSiguiente();
+
         tiempoRestante = entrada.duracion * 60;
         iniciarTemporizador(entrada);
     } else {
-        console.log('2')
         notificarCambio();
         clearInterval(timerInterval)
         document.getElementById('entrada-actual-info').textContent = 'Reloj finalizado';
         document.getElementById('timer').textContent = '00:00';
+        document.getElementById('entrada-siguiente-info').textContent = '';
     }
 }
 
@@ -327,7 +352,6 @@ function actualizarVisibilidad() {
 function setEntradas(radioButton) {
     const tipoTorneo = radioButton.value; // Obtiene el valor del radio seleccionado
     entradas = [...configuraciones[tipoTorneo]]; // Copia la configuración seleccionada a la variable `entradas`
-    console.log("Nueva configuración de entradas:", entradas);
     actualizarListaEntradas(); // Actualiza la tabla si ya está mostrando las entradas
 }
 

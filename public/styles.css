@@ -34,7 +34,13 @@ h1 {
 
 /* Información del turno actual */
 #entrada-actual-info {
-    font-size: 24px;
+    font-size: 40px;
+    color: #ff4444;
+}
+
+/* Información del siguiente turno*/
+#entrada-siguiente-info {
+    font-size: 20px;
     color: #ff4444;
 }
 
