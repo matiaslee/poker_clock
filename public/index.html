@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj 7 Diamantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Título de la aplicación -->
+
+    <!-- Contenedor de información del turno y temporizador -->
+    <div class="info-container">
+        <div id="entrada-actual-info">Presiona "Iniciar" para comenzar el reloj.</div>
+        <div id="timer">00:00</div>
+    </div>
+
+    <!-- Contenedor de botones para agregar niveles y pausas -->
+
+    <div id="inicializador" class="button-container">
+        <button onclick="reproducirClick();iniciarReloj()">Iniciar</button>
+    </div>
+
+
+    <div id="controladoresreloj" class="button-container">
+        <button onclick="reproducirClick();iniciarReloj()">Continuar</button>
+        <button onclick="reproducirClick();pausarReloj()">Pausar</button>
+        <button onclick="reproducirClick();resetearReloj()">Resetear</button>
+    </div>
+
+
+    <div id="configuraciones" class="config-container">
+        <label class="radio-label">
+            <input type="radio" name="torneo" value="custom" onchange="setEntradas(this)" checked>
+            <span>Custom</span>
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="torneo" value="torneo" onchange="setEntradas(this)"> 
+            <span>Torneo con refiche  [ Buy-in/Re-buy: 2000 -- Add-on: 3000 ]</span>
+        </label> 
+        <label class="radio-label">
+            <input type="radio" name="torneo" value="sit-and-go" onchange="setEntradas(this)">
+            <span>Sit and Go! [ Buy-in: 3000 ] </span>
+        </label>
+    </div>
+
+    
+    <div id="agregadores" class="button-container">
+        <button onclick="reproducirClick();agregarNivel()">Agregar Nivel</button>
+        <button onclick="reproducirClick();agregarPausa()">Agregar Pausa</button>
+    </div>
+
+    <!-- Tabla de entradas -->
+    <table id="entrada-tabla">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Ciega Chica</th>
+                <th>Ciega Grande</th>
+                <th>Duración (min)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <footer>
+        7 Diamantes - Cypto AI Poker Clock by Dr. Lee <br> All rights reserved
+    </footer>
+
+    <!-- Script del proyecto -->
+    <script src="script.js"></script>
+</body>
+</html>

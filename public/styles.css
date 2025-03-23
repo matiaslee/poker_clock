@@ -1,0 +1,223 @@
+/* Estilos de fondo y texto */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/* Título de la aplicación */
+h1 {
+    color: #ff4444;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de información y cronómetro */
+.info-container {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Cronómetro grande */
+#timer {
+    font-size: 500px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Información del turno actual */
+#entrada-actual-info {
+    font-size: 24px;
+    color: #ff4444;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botones de interacción */
+button:hover {
+    background-color: #ff4444;
+}
+
+/* Tabla de entradas */
+#entrada-tabla {
+    width: 800px;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+/* Filas de la tabla */
+#entrada-tabla td, #entrada-tabla th {
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Fondo de filas alternas para mejor legibilidad */
+#entrada-tabla tbody tr:nth-child(even) {
+    background-color: #222222;
+}
+
+/* Estilo de los inputs en las celdas */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #333333;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    text-align: center;
+}
+/* Footer siempre visible */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #444444;
+}
+
+
+/* Estilo del contenedor */
+.config-container {
+    padding: 20px;
+    background-color: #121212; /* Fondo oscuro */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Estilo de las etiquetas de radio */
+.radio-label {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.radio-label:hover {
+    background: #2b2b2b;
+}
+
+/* Estilo de los radios */
+.radio-label input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: #4caf50; /* Verde para selección */
+    background: #4caf50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.8);
+}
+
+/* Estilo del texto de cada opción */
+.radio-label span {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Estilos existentes (mantenerlos) */
+
+/* Responsividad: Ajustes según el tamaño de pantalla */
+@media (max-width: 1024px) {
+    #entrada-tabla {
+        width: 90%; /* Ajusta la tabla en tablets */
+    }
+
+    .button-container {
+        flex-direction: column; /* Botones apilados en dispositivos medianos */
+        gap: 20px;
+    }
+
+    #timer {
+        font-size: 300px; /* Reduce el tamaño del temporizador */
+    }
+
+    .info-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #entrada-tabla {
+        width: 100%; /* Tabla ocupa todo el ancho */
+    }
+
+    #timer {
+        font-size: 200px; /* Temporizador más pequeño en teléfonos */
+    }
+
+    .config-container {
+        padding: 10px;
+        font-size: 14px; /* Texto más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    #entrada-tabla th, #entrada-tabla td {
+        font-size: 12px; /* Texto más pequeño en la tabla */
+        padding: 8px; /* Reduce el espacio entre celdas */
+    }
+
+    .radio-label span {
+        font-size: 14px; /* Texto de opciones más pequeño */
+    }
+}
+
+/* Eliminar flechitas de inputs tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Para Firefox */
+}

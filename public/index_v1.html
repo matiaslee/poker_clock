@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj de Póquer</title>
+</head>
+<body>
+    <h1>Configuración del Reloj de Póquer</h1>
+    <form id="entry-form">
+        <label>Tipo de entrada:</label>
+        <select id="entry-type">
+            <option value="nivel">Nivel</option>
+            <option value="pausa">Pausa</option>
+        </select><br><br>
+
+        <div id="nivel-fields" style="display: none;">
+            <label>Ciega Chica:</label>
+            <input type="number" id="ciega-chica"><br>
+            <label>Ciega Grande:</label>
+            <input type="number" id="ciega-grande"><br>
+        </div>
+
+        <label>Duración (minutos):</label>
+        <input type="number" id="duracion"><br><br>
+
+        <button type="button" onclick="agregarEntrada()">Agregar Entrada</button>
+    </form>
+
+    <ul id="entrada-lista"></ul>
+
+    <button onclick="iniciarReloj()">Iniciar</button>
+
+    <h2>Temporizador</h2>
+    <div id="entrada-actual-info">Presiona "Iniciar" para comenzar el reloj.</div>
+    <h1 id="timer">00:00</h1>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
