@@ -297,8 +297,6 @@ function avanzarEntrada() {
 
     if (entradaActual < entradas.length) {
         let entrada = entradas[entradaActual];
-        let siguiente_entrada;
-        let hay_siguiente_entrada;
 
         mostrarEntradaActual(entrada);
         mostrarEntradaSiguiente();
