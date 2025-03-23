@@ -11,7 +11,7 @@
 
     <!-- Contenedor de información del turno y temporizador -->
     <div class="info-container">
-        <div id="entrada-actual-info">Presiona "Iniciar" para comenzar el reloj</div>
+        <div id="entrada-actual-info">Press "Start" to begin!</div>
         <div id="entrada-siguiente-info"> </div>
         <div id="timer">00:00</div>
     </div>
@@ -19,14 +19,14 @@
     <!-- Contenedor de botones para agregar niveles y pausas -->
 
     <div id="inicializador" class="button-container">
-        <button onclick="reproducirClick();iniciarReloj()">Iniciar</button>
+        <button onclick="reproducirClick();iniciarReloj()">Start</button>
     </div>
 
 
     <div id="controladoresreloj" class="button-container">
-        <button onclick="reproducirClick();iniciarReloj()">Continuar</button>
-        <button onclick="reproducirClick();pausarReloj()">Pausar</button>
-        <button onclick="reproducirClick();resetearReloj()">Resetear</button>
+        <button onclick="reproducirClick();iniciarReloj()">Resume</button>
+        <button onclick="reproducirClick();pausarReloj()">Pause</button>
+        <button onclick="reproducirClick();resetearReloj()">Reset</button>
     </div>
 
 
@@ -37,36 +37,36 @@
         </label>
         <label class="radio-label">
             <input type="radio" name="torneo" value="torneo" onchange="setEntradas(this)"> 
-            <span>Torneo con refiche  [ Buy-in/Re-buy: 2000 -- Add-on: 3000 ]</span>
+            <span> Tournement with rebuys  (~3 hours)<br> [ Buy-in / Re-buy (1st hour): 2000 chips  --  Add-on on break: 3000 chips ]</span>
         </label> 
         <label class="radio-label">
             <input type="radio" name="torneo" value="sit-and-go" onchange="setEntradas(this)">
-            <span>Sit and Go! [ Buy-in: 3000 ] </span>
+            <span>Sit and Go! (~2 hours) [ Buy-in: 3000 chips ] </span>
         </label>
     </div>
 
     
     <div id="agregadores" class="button-container">
-        <button onclick="reproducirClick();agregarNivel()">Agregar Nivel</button>
-        <button onclick="reproducirClick();agregarPausa()">Agregar Pausa</button>
+        <button onclick="reproducirClick();agregarNivel()">Add Level</button>
+        <button onclick="reproducirClick();agregarPausa()">Add Break</button>
     </div>
 
     <!-- Tabla de entradas -->
     <table id="entrada-tabla">
         <thead>
             <tr>
-                <th>Tipo</th>
-                <th>Ciega Chica</th>
-                <th>Ciega Grande</th>
-                <th>Duración (min)</th>
-                <th>Acciones</th>
+                <th>Type</th>
+                <th>Small Blind</th>
+                <th>Big Blind</th>
+                <th>Duration (min)</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
     <footer>
-        7 Diamantes - Cypto AI Poker Clock by Dr. Lee <br> All rights reserved
+        7 Diamonds - Cypto AI Poker Clock by Dr. Lee <br> All rights reserved
     </footer>
 
     <!-- Script del proyecto -->

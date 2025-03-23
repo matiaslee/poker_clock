@@ -4,77 +4,77 @@ const entradaLista = document.getElementById('entrada-lista');
 configuraciones = {
     'custom': [], 
     'torneo': [
-        { tipo: 'nivel', ciegaChica:   10, ciegaGrande:   20, duracion: 10 },
-        { tipo: 'nivel', ciegaChica:   20, ciegaGrande:   40, duracion: 10 },
-        { tipo: 'nivel', ciegaChica:   30, ciegaGrande:   60, duracion: 10 },
-        { tipo: 'nivel', ciegaChica:   50, ciegaGrande:  100, duracion: 10 },
-        { tipo: 'nivel', ciegaChica:   80, ciegaGrande:  160, duracion: 10 },
-        { tipo: 'nivel', ciegaChica:  100, ciegaGrande:  200, duracion: 10 },
+        { tipo: 'level', ciegaChica:   10, ciegaGrande:   20, duracion: 10 },
+        { tipo: 'level', ciegaChica:   20, ciegaGrande:   40, duracion: 10 },
+        { tipo: 'level', ciegaChica:   30, ciegaGrande:   60, duracion: 10 },
+        { tipo: 'level', ciegaChica:   50, ciegaGrande:  100, duracion: 10 },
+        { tipo: 'level', ciegaChica:   80, ciegaGrande:  160, duracion: 10 },
+        { tipo: 'level', ciegaChica:  100, ciegaGrande:  200, duracion: 10 },
         // 1hs
-        { tipo: 'pausa', duracion: 10 },
-        { tipo: 'nivel', ciegaChica:  120, ciegaGrande:  250, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  150, ciegaGrande:  300, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  200, ciegaGrande:  400, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  300, ciegaGrande:  600, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  400, ciegaGrande:  800, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  500, ciegaGrande:  1000, duracion: 8 },
+        { tipo: 'break', duracion: 10 },
+        { tipo: 'level', ciegaChica:  120, ciegaGrande:  250, duracion: 8 },
+        { tipo: 'level', ciegaChica:  150, ciegaGrande:  300, duracion: 8 },
+        { tipo: 'level', ciegaChica:  200, ciegaGrande:  400, duracion: 8 },
+        { tipo: 'level', ciegaChica:  300, ciegaGrande:  600, duracion: 8 },
+        { tipo: 'level', ciegaChica:  400, ciegaGrande:  800, duracion: 8 },
+        { tipo: 'level', ciegaChica:  500, ciegaGrande:  1000, duracion: 8 },
         // Bloque 3
-        { tipo: 'nivel', ciegaChica:   800, ciegaGrande:  1600, duracion: 7 },
-        { tipo: 'nivel', ciegaChica:  1000, ciegaGrande:  2000, duracion: 7 },
-        { tipo: 'nivel', ciegaChica:  1200, ciegaGrande:  2500, duracion: 7 },
-        { tipo: 'nivel', ciegaChica:  1500, ciegaGrande:  3000, duracion: 7 },
-        { tipo: 'nivel', ciegaChica:  2000, ciegaGrande:  4000, duracion: 7 },
-        { tipo: 'nivel', ciegaChica:  3000, ciegaGrande:  6000, duracion: 7 },
+        { tipo: 'level', ciegaChica:   800, ciegaGrande:  1600, duracion: 7 },
+        { tipo: 'level', ciegaChica:  1000, ciegaGrande:  2000, duracion: 7 },
+        { tipo: 'level', ciegaChica:  1200, ciegaGrande:  2500, duracion: 7 },
+        { tipo: 'level', ciegaChica:  1500, ciegaGrande:  3000, duracion: 7 },
+        { tipo: 'level', ciegaChica:  2000, ciegaGrande:  4000, duracion: 7 },
+        { tipo: 'level', ciegaChica:  3000, ciegaGrande:  6000, duracion: 7 },
         // Bloque 4
-        { tipo: 'nivel', ciegaChica:  4000, ciegaGrande:  8000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  5000, ciegaGrande: 10000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  7000, ciegaGrande: 15000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica: 10000, ciegaGrande: 20000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica: 12000, ciegaGrande: 25000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica: 15000, ciegaGrande: 30000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  4000, ciegaGrande:  8000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  5000, ciegaGrande: 10000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  7000, ciegaGrande: 15000, duracion: 5 },
+        { tipo: 'level', ciegaChica: 10000, ciegaGrande: 20000, duracion: 5 },
+        { tipo: 'level', ciegaChica: 12000, ciegaGrande: 25000, duracion: 5 },
+        { tipo: 'level', ciegaChica: 15000, ciegaGrande: 30000, duracion: 5 },
         // Bloque 5
-        { tipo: 'nivel', ciegaChica: 20000, ciegaGrande: 40000, duracion: 3 },
-        { tipo: 'nivel', ciegaChica: 25000, ciegaGrande: 50000, duracion: 3 },
-        { tipo: 'nivel', ciegaChica: 30000, ciegaGrande: 60000, duracion: 3 },
-        { tipo: 'nivel', ciegaChica: 40000, ciegaGrande: 80000, duracion: 3 },
-        { tipo: 'nivel', ciegaChica: 50000, ciegaGrande:100000, duracion: 3 },
-        { tipo: 'nivel', ciegaChica: 60000, ciegaGrande:120000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 20000, ciegaGrande: 40000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 25000, ciegaGrande: 50000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 30000, ciegaGrande: 60000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 40000, ciegaGrande: 80000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 50000, ciegaGrande:100000, duracion: 3 },
+        { tipo: 'level', ciegaChica: 60000, ciegaGrande:120000, duracion: 3 },
     ],
     'sit-and-go' : [
-        { tipo: 'nivel', ciegaChica:   10, ciegaGrande:   20, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:   20, ciegaGrande:   40, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:   30, ciegaGrande:   60, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:   50, ciegaGrande:  100, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:   80, ciegaGrande:  160, duracion: 8 },
-        { tipo: 'nivel', ciegaChica:  100, ciegaGrande:  200, duracion: 8 },
+        { tipo: 'level', ciegaChica:   10, ciegaGrande:   20, duracion: 8 },
+        { tipo: 'level', ciegaChica:   20, ciegaGrande:   40, duracion: 8 },
+        { tipo: 'level', ciegaChica:   30, ciegaGrande:   60, duracion: 8 },
+        { tipo: 'level', ciegaChica:   50, ciegaGrande:  100, duracion: 8 },
+        { tipo: 'level', ciegaChica:   80, ciegaGrande:  160, duracion: 8 },
+        { tipo: 'level', ciegaChica:  100, ciegaGrande:  200, duracion: 8 },
         // 1hs
-        { tipo: 'nivel', ciegaChica:  120, ciegaGrande:  250, duracion: 6 },
-        { tipo: 'nivel', ciegaChica:  150, ciegaGrande:  300, duracion: 6 },
-        { tipo: 'nivel', ciegaChica:  200, ciegaGrande:  400, duracion: 6 },
-        { tipo: 'nivel', ciegaChica:  300, ciegaGrande:  600, duracion: 6 },
-        { tipo: 'nivel', ciegaChica:  400, ciegaGrande:  800, duracion: 6 },
-        { tipo: 'nivel', ciegaChica:  500, ciegaGrande:  1000, duracion: 6 },
+        { tipo: 'level', ciegaChica:  120, ciegaGrande:  250, duracion: 6 },
+        { tipo: 'level', ciegaChica:  150, ciegaGrande:  300, duracion: 6 },
+        { tipo: 'level', ciegaChica:  200, ciegaGrande:  400, duracion: 6 },
+        { tipo: 'level', ciegaChica:  300, ciegaGrande:  600, duracion: 6 },
+        { tipo: 'level', ciegaChica:  400, ciegaGrande:  800, duracion: 6 },
+        { tipo: 'level', ciegaChica:  500, ciegaGrande:  1000, duracion: 6 },
         // Bloque 3
-        { tipo: 'nivel', ciegaChica:   800, ciegaGrande:  1600, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  1000, ciegaGrande:  2000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  1200, ciegaGrande:  2500, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  1500, ciegaGrande:  3000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  2000, ciegaGrande:  4000, duracion: 5 },
-        { tipo: 'nivel', ciegaChica:  3000, ciegaGrande:  6000, duracion: 5 },
+        { tipo: 'level', ciegaChica:   800, ciegaGrande:  1600, duracion: 5 },
+        { tipo: 'level', ciegaChica:  1000, ciegaGrande:  2000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  1200, ciegaGrande:  2500, duracion: 5 },
+        { tipo: 'level', ciegaChica:  1500, ciegaGrande:  3000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  2000, ciegaGrande:  4000, duracion: 5 },
+        { tipo: 'level', ciegaChica:  3000, ciegaGrande:  6000, duracion: 5 },
         // Bloque 4
-        { tipo: 'nivel', ciegaChica:  4000, ciegaGrande:  8000, duracion: 4 },
-        { tipo: 'nivel', ciegaChica:  5000, ciegaGrande: 10000, duracion: 4 },
-        { tipo: 'nivel', ciegaChica:  7000, ciegaGrande: 15000, duracion: 4 },
-        { tipo: 'nivel', ciegaChica: 10000, ciegaGrande: 20000, duracion: 4 },
-        { tipo: 'nivel', ciegaChica: 12000, ciegaGrande: 25000, duracion: 4 },
-        { tipo: 'nivel', ciegaChica: 15000, ciegaGrande: 30000, duracion: 4 },
+        { tipo: 'level', ciegaChica:  4000, ciegaGrande:  8000, duracion: 4 },
+        { tipo: 'level', ciegaChica:  5000, ciegaGrande: 10000, duracion: 4 },
+        { tipo: 'level', ciegaChica:  7000, ciegaGrande: 15000, duracion: 4 },
+        { tipo: 'level', ciegaChica: 10000, ciegaGrande: 20000, duracion: 4 },
+        { tipo: 'level', ciegaChica: 12000, ciegaGrande: 25000, duracion: 4 },
+        { tipo: 'level', ciegaChica: 15000, ciegaGrande: 30000, duracion: 4 },
         // Bloque 5
-        { tipo: 'nivel', ciegaChica: 20000, ciegaGrande: 40000, duracion: 2 },
-        { tipo: 'nivel', ciegaChica: 25000, ciegaGrande: 50000, duracion: 2 },
-        { tipo: 'nivel', ciegaChica: 30000, ciegaGrande: 60000, duracion: 2 },
-        { tipo: 'nivel', ciegaChica: 40000, ciegaGrande: 80000, duracion: 2 },
-        { tipo: 'nivel', ciegaChica: 50000, ciegaGrande:100000, duracion: 2 },
-        { tipo: 'nivel', ciegaChica: 60000, ciegaGrande:120000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 20000, ciegaGrande: 40000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 25000, ciegaGrande: 50000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 30000, ciegaGrande: 60000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 40000, ciegaGrande: 80000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 50000, ciegaGrande:100000, duracion: 2 },
+        { tipo: 'level', ciegaChica: 60000, ciegaGrande:120000, duracion: 2 },
     ]
 }
 
@@ -98,14 +98,14 @@ let editandoIndex = null; // Guardamos el índice de la entrada que se está edi
 
 // Agregar nivel a la lista
 function agregarNivel() {
-    const nuevoNivel = { tipo: 'nivel', ciegaChica: 10, ciegaGrande: 10, duracion: 10 };
+    const nuevoNivel = { tipo: 'level', ciegaChica: 10, ciegaGrande: 10, duracion: 10 };
     entradas.push(nuevoNivel);
     actualizarListaEntradas();
 }
 
 // Función para agregar una pausa directamente a la tabla con valores predeterminados
 function agregarPausa() {
-    const nuevaPausa = { tipo: 'pausa', duracion: 10 };
+    const nuevaPausa = { tipo: 'break', duracion: 10 };
     entradas.push(nuevaPausa);
     actualizarListaEntradas();
 }
@@ -120,12 +120,12 @@ function actualizarListaEntradas() {
 
         // Columna de tipo (Nivel o Pausa)
         const tipoCell = document.createElement('td');
-        tipoCell.textContent = entrada.tipo === 'nivel' ? `${index + 1}. Nivel` : `${index + 1}. Pausa`;
+        tipoCell.textContent = entrada.tipo === 'level' ? `${index + 1}. Level` : `${index + 1}. Break`;
         row.appendChild(tipoCell);
 
         // Columna de ciega chica
         const ciegaChicaCell = document.createElement('td');
-        if (entrada.tipo === 'nivel') {
+        if (entrada.tipo === 'level') {
             const ciegaChicaInput = document.createElement('input');
             ciegaChicaInput.type = 'number';
             ciegaChicaInput.value = entrada.ciegaChica;
@@ -141,7 +141,7 @@ function actualizarListaEntradas() {
 
         // Columna de ciega grande
         const ciegaGrandeCell = document.createElement('td');
-        if (entrada.tipo === 'nivel') {
+        if (entrada.tipo === 'level') {
             const ciegaGrandeInput = document.createElement('input');
             ciegaGrandeInput.type = 'number';
             ciegaGrandeInput.value = entrada.ciegaGrande;
@@ -170,7 +170,7 @@ function actualizarListaEntradas() {
         // Columna de acciones (solo botón de borrar)
         const accionesCell = document.createElement('td');
         const borrarBtn = document.createElement('button');
-        borrarBtn.textContent = 'Borrar';
+        borrarBtn.textContent = 'Delete';
         borrarBtn.onclick = () => borrarEntrada(index);
         accionesCell.appendChild(borrarBtn);
 
@@ -182,12 +182,12 @@ function actualizarListaEntradas() {
 // Editar una entrada
 function editarEntrada(index) {
     const entrada = entradas[index];
-    if (entrada.tipo === 'nivel') {
+    if (entrada.tipo === 'level') {
         document.getElementById('ciega-chica-nivel').value = entrada.ciegaChica;
         document.getElementById('ciega-grande-nivel').value = entrada.ciegaGrande;
         document.getElementById('duracion-nivel').value = entrada.duracion;
         mostrarFormularioNivel();
-    } else if (entrada.tipo === 'pausa') {
+    } else if (entrada.tipo === 'break') {
         document.getElementById('duracion-pausa').value = entrada.duracion;
         mostrarFormularioPausa();
     }
@@ -260,16 +260,17 @@ function pausarReloj(){
 
 function resetearEntradaActual(entrada) {
     const info = document.getElementById('entrada-actual-info');
-    info.textContent = `Presiona "Iniciar" para comenzar el reloj.`;
+    info.textContent = `Press "Start" to begin!`;
     document.getElementById('timer').textContent = '00:00';
+    document.getElementById('entrada-siguiente-info').textContent = '';
 }
 
 
 function mostrarEntradaActual(entrada) {
     const info = document.getElementById('entrada-actual-info');
-    info.textContent = entrada.tipo === 'nivel'
-        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duración: ${entrada.duracion} mins - Nivel: ${entradaActual + 1}`
-        : `Pausa - Duración ${entrada.duracion} min`;
+    info.textContent = entrada.tipo === 'level'
+        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Durantion: ${entrada.duracion} mins - Level: ${entradaActual + 1}`
+        : `Break - Duration ${entrada.duracion} min`;
 }
 
 function mostrarEntradaSiguiente() {
@@ -281,12 +282,12 @@ function mostrarEntradaSiguiente() {
 
     if (hay_siguiente_entrada) {
         entrada = entradas[entradaActual + 1];
-        info.textContent = entrada.tipo === 'nivel'
-            ? `(Siguiente Nivel: ${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duración: ${entrada.duracion} mins)`
-            : `(Siguiente Nivel: Pausa - Duración ${entrada.duracion} mins)`;
+        info.textContent = entrada.tipo === 'level'
+            ? `(Next Level: ${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duration: ${entrada.duracion} mins)`
+            : `(Next Level: Break - Duration ${entrada.duracion} mins)`;
 
     }else{
-        info.textContent = `Ultima Entrada...`;
+        info.textContent = `This is the last level...`;
     }
 }
 
