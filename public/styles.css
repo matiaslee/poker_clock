@@ -227,3 +227,11 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield; /* Para Firefox */
 }
+
+
+.menu-link {
+    display: inline-block;
+    margin-bottom: 1em;
+    color: #ffd700;
+    text-decoration: none;
+}
