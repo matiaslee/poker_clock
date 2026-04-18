@@ -2,7 +2,7 @@ const entradaLista = document.getElementById('entrada-lista');
 
 
 configuraciones = {
-    'custom': [], 
+    'custom': [],
     'torneo': [
         { tipo: 'level', ciegaChica:   10, ciegaGrande:   20, duracion: 10 },
         { tipo: 'level', ciegaChica:   20, ciegaGrande:   40, duracion: 10 },
@@ -269,7 +269,7 @@ function resetearEntradaActual(entrada) {
 function mostrarEntradaActual(entrada) {
     const info = document.getElementById('entrada-actual-info');
     info.textContent = entrada.tipo === 'level'
-        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Durantion: ${entrada.duracion} mins - Level: ${entradaActual + 1}`
+        ? `${entrada.ciegaChica} / ${entrada.ciegaGrande} - Duration: ${entrada.duracion} mins - Level: ${entradaActual + 1}`
         : `Break - Duration ${entrada.duracion} min`;
 }
 
